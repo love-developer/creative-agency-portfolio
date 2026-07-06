@@ -1,0 +1,6 @@
+{
+  "name": "Aether Creative Agency",
+  "description": "An Awwwards-level ultra-premium creative agency website featuring deep-dive projects, micro-interactions, stunning fluid canvas backgrounds, custom cursor, and immersive cinematic layouts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

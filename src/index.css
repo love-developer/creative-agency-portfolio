@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Base resets & styles */
+html, body {
+  background-color: #050508;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, button, input, textarea, select, option, a, p, span, div, h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+}
+
+/* Editorial selection accent colors */
+::selection {
+  background-color: rgba(168, 85, 247, 0.25);
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #050508;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.4);
+}
+
+/* Hide standard browser cursors on mouse-supporting viewports to let our fluid cursor handle tracking */
+@media (pointer: fine) {
+  html, body, select, option, input, textarea {
+    cursor: none;
+  }
+  a, button, [role="button"], [data-cursor], iframe {
+    cursor: none !important;
+  }
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+}
+
+/* Typographic utility overrides */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  letter-spacing: -0.04em;
+}
+
+.font-mono, .font-display {
+  font-family: var(--font-sans) !important;
+}
